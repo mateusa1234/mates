@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Profile Page</h1>
+    </header>
+
+    <main>
+        <section class="profile-details">
+            <h2>Profile Details</h2>
+            <p>This is the profile page. Here you can view your profile information.</p>
+            <div class="profile-info"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Photo Marketplace</p>
+    </footer>
+    <!-- Profile Section -->
+<section class="profile-section">
+    <h2>User Profile</h2>
+    <div class="profile-info">
+        
+        <div class="profile-details">
+            <label for="bio">Bio:</label>
+            <textarea id="bio" rows="4" cols="50"></textarea>
+            <button onclick="saveProfile()">Save Profile</button>
+        </div>
+    </div>
+</section><!-- Profile Section -->
+<section class="profile-section">
+    <div class="profile-info">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img id="profile-picture" src="default_profile_picture.jpg" alt="Profile Picture">
+                <input type="file" accept="image/*" onchange="previewProfilePicture(this)">
+            </div>
+            <div class="profile-stats">
+                <h1>Username</h1>
+                <p>Bio: <span id="bio">This is my bio</span></p>
+                <p>Posts: <span id="post-count">0</span></p>
+                <p>Followers: <span id="followers-count">0</span></p>
+                <p>Following: <span id="following-count">0</span></p>
+                <button onclick="editProfile()">Edit Profile</button>
+            </div>
+        </div>
+        <hr>
+        <!-- Display user's posts -->
+        <div class="user-posts">
+            <!-- Posts will be displayed here -->
+        </div>
+    </div>
+</section>
+
+
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script> <!-- Include the separate JavaScript file for the Profile Page -->
+</body>
+</html>

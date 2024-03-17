@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Photo Marketplace</h1>
+    </header>
+
+    <main>
+        <section class="contact-details">
+            <h2>Contact Us</h2>
+            <p>Welcome to the Contact Page. Here you can get in touch with us.</p>
+            <p>If you have any inquiries or feedback, feel free to reach out to us using the form below:</p>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Photo Marketplace</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script> <!-- Include the separate JavaScript file for the Contact Page -->
+</body>
+</html>

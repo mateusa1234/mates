@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Photo Marketplace</title>
+</head>
+
+<body>
+    <header>
+        <h1>Photo Marketplace</h1>
+       
+        <nav>
+            <ul>
+                <li><a href="Home.index.html">Home</a></li>
+                <li><a href="Profile.index.html">Profile</a></li>
+                <li><a href="About.index.html">About</a></li>
+                <li><a href="Condact.index.html">Contact</a></li>
+                <li><a href="login.html">Logout</a></li> <!-- Moved inside the navigation -->
+            </ul>
+        </nav>
+    </header>
+    <section class="search-section">
+        <h2>Search Photos</h2>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search photos...">
+            <button onclick="searchPhotos()">Search</button>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <h2>Search Results</h2>
+        <div id="search-results">
+            <!-- Search results will be displayed here -->
+        </div>
+    </section>
+
+    <section class="search-filter">
+        <h2>Search and Filter</h2>
+        <div class="filter-options">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter">
+                <option value="all">All</option>
+                <option value="landscape">Landscape</option>
+                <option value="portrait">Portrait</option>
+                <option value="nature">Nature</option>
+                <!-- Add more categories as needed -->
+            </select>
+
+            <label for="tag-filter">Tag:</label>
+            <input type="text" id="tag-filter">
+
+            <label for="price-range">Price Range:</label>
+            <input type="number" id="min-price" placeholder="Min">
+            <input type="number" id="max-price" placeholder="Max">
+
+            <button onclick="applyFilters()">Apply Filters</button>
+            <button onclick="resetFilters()">Reset Filters</button>
+        </div>
+    </section>
+
+    <main>
+        <div class="content fadeIn">
+            <!-- Content goes here -->
+        </div>
+        <div class="content fadeIn">
+            <!-- Content goes here -->
+        </div>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <h2>Profile</h2>
+            <div class="profile-info">
+                <!-- Display user information here -->
+            </div>
+        </section>
+        
+        <!-- Photo Upload Section -->
+        <section class="photo-upload">
+            <h2>Upload Photo</h2>
+            <div class="upload-container">
+                <input type="file" accept="image/*" onchange="previewPhoto(this)">
+            </div>
+        </section>
+
+        <!-- Photo Details Section -->
+        <section class="photo-details">
+            <h2>Photo Details</h2>
+            <div class="photo-container">
+                <img id="uploaded-photo" src="" alt="Uploaded photo">
+            </div>
+            <div class="price-container">
+                <label for="photo-price">Price:</label>
+                <input type="number" id="photo-price" readonly>
+            </div>
+        </section>
+
+        <!-- Bid Section -->
+        <section class="bid-section">
+            <h2>Place Bid</h2>
+            <div class="bid-container">
+                <label for="bid-price">Bid Amount:</label>
+                <input type="number" id="bid-price">
+                <button onclick="addBid()">Place Bid</button>
+            </div>
+            <div class="info-container">
+                <p>Total Price: <span id="total-price">0</span></p>
+                <p>Number of Users: <span id="num-users">0</span></p>
+            </div>
+        </section>
+
+        <!-- Display Filtered Photos -->
+        <section class="filtered-photos">
+            <h2>Filtered Photos</h2>
+            <div id="photo-gallery">
+                <!-- Photos will be displayed here -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Photo Marketplace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

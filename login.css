@@ -1,0 +1,88 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f4e3; /* Light golden */
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #cda434; /* Dark golden */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #cda434; /* Dark golden */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cda434; /* Dark golden */
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #cda434; /* Dark golden */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b19200; /* Light golden */
+}
+
+.error-message {
+    color: #ff0000; /* Red */
+    margin-top: 5px;
+}
+
+/* Hide the login form by default */
+#login-form {
+    display: none;
+}
+
+/* Show the login form when the URL contains #login */
+#login-form:target {
+    display: block;
+}
+
+/* Show the register form by default */
+#register-form {
+    display: block;
+}
+
+/* Hide the register form when the URL contains #login */
+#register-form:target {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
